@@ -1,0 +1,9 @@
+<h2><%= t('description') %></h2>
+
+<%= simple_form_for :user, url: upload_file_path, multipart: true do |f| %>
+  <p><span> <%= t('choose_csv_file') %> </span></p>
+
+  <p><%= f.file_field :file, accept: '.csv' %></p>
+
+  <p><%= f.button :submit, class: "btn-primary", value: t('process') %></p>
+<% end %>

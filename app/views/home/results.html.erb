@@ -1,0 +1,10 @@
+
+<% if @file_url then %>
+  <p>Click <a href="<%= @file_url%>" target="_blank">here</a> to show results.</p>
+
+  <p><%= t('results_are_also_printed')%></p>
+  <% else %>
+  <p><%= t('error')%></p>
+<% end %>
+
+<p><%= link_to t('back'), home_path %></p>
